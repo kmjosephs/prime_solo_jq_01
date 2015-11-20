@@ -3,6 +3,10 @@
   <head>
     <title>Weekend Challenge 1</title>
     <link href="style.css" rel="stylesheet">
+
+    <script src="jquery-2.1.4.js"> </script>
+    <script src="handlebars-v4.0.4.js"></script>
+    <script src="script.js"></script>
   </head>
   <body>
     <h1>Future Industries</h1>
@@ -25,14 +29,21 @@
 
         </form>
     </div>
-    <div class="placedContent">
-      <h2>Updated Employee Information</h2>
-
+    <div id="empData" >
+      <script id="employeeListScript" type="text/x-handlebars-template">
+        <h2>Updated Employee Information</h2>
+        <ul>
+          {{#each employees}}
+          <li>{{name}}</li>
+          {{/each}}
+        </ul>
+      </script>
 
     </div>
-    <script src="jquery-2.1.4.js"> </script>
-    <script src="handlebars-v4.04.4.js"></script>
-    <script src="script.js"></script>
+    <div class="employeeList">
+
+    </div>
+
 
   </body>
 </html>
